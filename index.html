@@ -16,9 +16,11 @@
         <div class="product-container">
           <div class="product-image">
             <!-- image goes here -->
+             <img :src="image" alt="just a pair of green socks">
           </div>
           <div class="product-info">
-            <h1>{{ product }}</h1>
+            <h1> {{ product }} </h1>
+            <a :href="url">Link to a sock company</a> 
           </div>
         </div>
       </div>
