@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Vue Mastery</title>
+    <title>Hoang Le Bach - GCS230324</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
@@ -13,11 +13,11 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart }})</div>
-      
+
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <img v-bind:src="image">
+            <img v-bind:src="image" />
           </div>
           <div class="product-info">
             <h1>{{ title }}</h1>
@@ -27,14 +27,22 @@
               <li v-for="detail in details">{{ detail }}</li>
             </ul>
 
-            <div 
-              class="color-circle" 
-              v-for="(variant, index) in variants" 
-              :key="variant.id" 
-              @mouseover="updateVariant(index)" 
-              :style="{ backgroundColor: variant.color }"></div>
-            <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" v-on:click="addToCart">Add to Cart</button>
-            <p v-show="sale"> {{ title }} is on sale</p>
+            <div
+              class="color-circle"
+              v-for="(variant, index) in variants"
+              :key="variant.id"
+              @mouseover="updateVariant(index)"
+              :style="{ backgroundColor: variant.color }"
+            ></div>
+            <button
+              class="button"
+              :class="{ disabledButton: !inStock }"
+              :disabled="!inStock"
+              v-on:click="addToCart"
+            >
+              Add to Cart
+            </button>
+            <p v-show="sale">{{ title }} is on sale</p>
           </div>
         </div>
       </div>
@@ -45,7 +53,7 @@
 
     <!-- Mount App -->
     <script>
-      const mountedApp = app.mount('#app')
+      const mountedApp = app.mount("#app");
     </script>
   </body>
 </html>
